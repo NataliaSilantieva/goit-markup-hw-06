@@ -273,10 +273,9 @@ button{
     letter-spacing: 0.06em;
 
     text-align: center;
-    padding:200px;
-   
-    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.8), rgba(255, 255, 255, 0.1)), url(../images/hero.jpg)  ;
- 
+    padding-top:200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8),rgba(47, 48, 58, 0.8)), url(../images/hero.jpg)  ;
     width: 1600px;
     height: 600px;
     background-size: cover;
@@ -312,13 +311,20 @@ button{
 
 
 }
-
-
+.advantages-list{
+    padding: 0;
+}
 
 .advantages-list:not(:last-child){
     margin-right: 30px;
 }
 
+
+.image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .advantages-icon{
     background-color: var(--buttons-background);
     width: 270px;
@@ -434,7 +440,7 @@ button{
 
 
 .cards {
-   width: 370px;
+   width: 270px;
    margin: 0 30px 0 0;
    padding: 0;
    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);;
@@ -484,6 +490,11 @@ button{
 
 .social-links{
     color:var(--social-link-color);
+    display: flex;
+    
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
@@ -492,6 +503,11 @@ button{
     border-radius:50% ;
 }
 
+.social-link{
+    height: 44px;
+    width: 44px;
+    position: relative
+}
 
 .icon-social{
     fill:var(--accent-color);
@@ -500,7 +516,12 @@ button{
     width: 44px;
     height: 44px;
 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .icon-social:hover{
@@ -552,6 +573,8 @@ margin-bottom: 0;
 
 .p{
     padding: 20px;
+    width: 100%;
+    height: 100%;
  
 }    
  .technokryk-definition{
@@ -662,17 +685,24 @@ margin-bottom: 0;
 
 .section-companies{
     
-    padding: 20px 20px ;
+    
     outline:  1px solid var(--social-link-color);
     width: 170px;
     height: 90px;
-    text-align: center;
-
+    
+    position: relative;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .companies-list :first-child{
     margin: 0;
+}
+
+.companies-link{
+    width: 170px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -735,14 +765,18 @@ footer{
 }
 .icon-logo{
     fill:var(--social-link-color);
-    
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 
 .icon-logo:hover{
-    fill:var(--link-color)
+    fill:var(--link-color);
+    
 }
 
 .subscription{
@@ -776,10 +810,7 @@ footer{
 
     
 
-.address:hover,
-.address:focus{
-    color: var(--link-color);
-}
+
 
 .address{
 
@@ -804,20 +835,14 @@ footer{
 }
 .social-footer{
     display: inline-flex;
-    margin: 21px 0 0 0;
+    margin: 20px 0 0 0;
     padding: 0;
-    width: 44px;
-    height:44px;
+   
 }
-.social-footer .social-links{
-    
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
 
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
-}
+
 .social-footer .social-links:not(:last-child){
     margin-right: 10px;
 }
