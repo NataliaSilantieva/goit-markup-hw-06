@@ -437,7 +437,9 @@ button{
 
 }
 
-
+.image-team{
+    display: block;
+}
 
 .cards {
    width: 270px;
