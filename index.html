@@ -14,7 +14,7 @@
 <body>
                                   <!-- Шапка сайта -->
     <header >
-<div class="container">
+<div class="container-nav">
     <nav>
             <a href="./index.html" class="upper-logo">
                 <span class="colortext">Web</span> Studio
@@ -53,14 +53,15 @@
 </div>
     </header>
     
-    <div class="container">
+    
     <main>
         
                               <!-- Герой -->
     <section class="hero">
     <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="order-button" >Заказать услугу</button>
-</section>
+        <button data-modal-open type="button" class="order-button" >Заказать услугу</button>
+    </section>
+    <div class="container">
 <section class="section ">
                              <!--преимущества-->
     <ul class="advantages-container">
@@ -95,7 +96,7 @@
         </li>
     </ul>
 </section>
-<!--Продукты-->
+                                        <!--Продукты-->
 <section class="section">
     <h2 class="section-title">Чем мы занимаемся</h2>
     <ul class="section-app container">
@@ -119,13 +120,13 @@
         </li>
     </ul>
 </section>
-
-<!--Комманда-->
+    </div>
+                                         <!--Комманда-->
 <section class="section-team ">
     
     <h2 class="section-title">Наша команда</h2>
 
-    <ul class="team-names container ">
+    <ul class="team-names  ">
 <li class="cards">
     
         <img src="./images/john_smith.jpg" class="image-team" alt="John Smith" width="270" height="260"/>
@@ -351,7 +352,7 @@
 </section>
 
 </main>
-</div>
+
 
 
 <!--Футер-->
@@ -423,7 +424,42 @@
 </div>  
  
 </footer> 
-<div class="backdrop"></div>
+    <div data-modal class="backdrop is-hidden">
+    <div  class="modal">
+        <svg data-modal-close class="icon-close" width="11" height="11">
+            <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+        <span class="form-title">Оставьте свои данные, мы вам перезвоним</span>
+      <form class="js-speaker-form">
+          <div class="form-field">
+          <input type="text" class="form-input" name="name" placeholder=" ">
+          <label for="name" class="form-label">Имя</label>
+          <svg class="form-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-name"></use>
+          </svg>
+        </div>
+        <div class="form-field">
+            <input type="tel" class="form-input" name="telephone" placeholder=" ">
+            <label for="telephone" class="form-label">Телефон</label>
+            <svg class="form-icon" width="13" height="13">
+                <use href="./images/sprite.svg#icon-number"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <input type="email" class="form-input" name="email" placeholder=" ">
+            <label for="email" class="form-label">Почта</label>
+            <svg class="form-icon" width="15" height="12">
+                <use href="./images/sprite.svg#icon-mail"></use>
+            </svg>
+          </div>
+        <div class="form-field">
+            <textarea class="form-label comment" name="comment" rows="5" placeholder=" ">Комментарий</textarea>
+        </div>
+      </form>  
+    </div>
+</div>
+
 <script src="./js/modal.js"></script>
+<script src="./js/form_order.js"></script>
 </body>
 </html>
