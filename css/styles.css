@@ -71,10 +71,11 @@ ul{
     text-align: center;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
-<!-- Шапка сайта -->
+/* Шапка сайта */
 
 header{
     width:1200px;
+    margin:0 auto;
 }
 .upper-logo{
     font-family: Raleway, sans-serif;
@@ -91,12 +92,24 @@ header{
 .upper-logo:focus{
     color: var(--link-color);
 }
-.container nav{
-    display:flex;
-    
-}
- .container{
+
+ nav{
     display: flex;
+}
+.container-nav{
+    display: flex;
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+   
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+      
+} 
+
+ .container{
+   
     width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
@@ -276,12 +289,12 @@ button{
     padding-top:200px;
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.8),rgba(47, 48, 58, 0.8)), url(../images/hero.jpg)  ;
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   
+    margin:auto;
     
 }
 .hero-title {
@@ -353,12 +366,12 @@ button{
 }
 
 
-<!--Продукты-->
+/* Продукты */
 
 .section{
     letter-spacing: 0.03em;
 
-    display: flex;
+    
     padding-bottom: 94px;
     margin: 0;
 }
@@ -415,26 +428,30 @@ button{
 
 
         padding: 94px 0 50px 0;
-        margin: 0 auto;
-        width:1200px;
+        margin: 0 ;
+        
         
     
     }
     /* Комманда */
 
 
-    ul .team-names{
-        padding: 0;
-        margin: 0;
+   
+.section-team{
+        background-color: var(--buttons-background);
+    
+        margin: auto;
+        padding: 0 0 94px 0;
+        width:1600px;
+        
     }
 .team-names{
     
     line-height: 1.2;
 
   display: flex;
-  width:270px;
-   padding: 0;
-
+  padding: 0 215px 0 215px;
+  margin: 0 ;
 }
 
 .image-team{
@@ -480,14 +497,7 @@ button{
     margin-right: 30px;
 }
 
-.section-team{
-    background-color: var(--buttons-background);
 
-    margin: 0;
-    padding: 0 0 94px 0;
-
-    
-}
 
 
 .social-links{
@@ -661,12 +671,13 @@ margin-bottom: 0;
 
 /* Клиенты */
 
-
-.clients .companies-list{
-    margin: 0;
-    padding: 0 0 94px 0 ;
-
+.clients{
+    
+    
+    margin:0;
+    padding:0 215px 0 215px;
 }
+
 .companies-list{
   
     
@@ -708,12 +719,11 @@ margin-bottom: 0;
 }
 
 
-<!--Футер-->
+/* Футер */
 footer{
     line-height: 2; 
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
+   
+    
     margin: 0 auto; 
 
     background-color:var(--footer-background);  
@@ -723,7 +733,7 @@ footer{
     font-size: 14px;
     line-height: 1.1;
 
-    display: flex;
+    
     padding-bottom: 28px;
    
 }
@@ -736,7 +746,7 @@ footer{
     line-height: 2;
 
     display: flex;
-    padding:48px 15px 24px 15px;
+    padding:48px 0 24px 0;
     margin-left:  auto;
     margin-right: auto;
     align-items: baseline;
@@ -879,3 +889,116 @@ footer{
     margin: 0 auto ;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.backdrop{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 1024px;
+    transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden{
+    opacity:0;
+    pointer-events: none;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width:528px;
+    height: 581px;
+    background-color: var(--secondary-text-color);
+    
+}
+.backdrop.is-hidden.modal{
+    transform: translate(-50%,-50%) scale(0.8);  
+}
+
+.icon-close{
+   
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    width: 30px;
+    height: 30px;
+    padding: 9px 9px 10px 10px;
+    left: 507px;
+    background-color:var(--secondary-text-color);
+    bottom: 560px;
+
+}
+
+.form-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+    display: flex;
+    padding: 40px 40px 0 40px;
+
+}
+.form-field{
+    position: relative;
+}
+.form-label{
+    position: absolute;
+    top: 42px;
+    left: 82px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+
+    color: var(--accent-color);
+    
+}
+.form-input{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin: 30px 40px 0 40px;
+    width: 448px;
+    height:40px;
+    padding-left: 42px;
+}
+
+.form-input:focus{
+    border:1px solid var(--link-color);
+}
+
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label{
+    transform: translateY(-32px) translateX(-23px);
+    color:var(--link-color);
+    
+}
+
+.form-icon{
+width:12px;
+height: 12px;
+position:absolute;
+top:44px;
+left:59px;
+}
+
+.comment{
+    left:0;
+    top:0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 120px;
+    width: 448px;
+    margin: 28px 40px 0 40px;
+    padding:12px 16px;
+}
+
+
+
