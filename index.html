@@ -410,13 +410,17 @@
 </ul>
 </div>
 <div class="subscription">
-    <b class="join">подписаться на рассылку</b><br>
+    <b class="join">Подпишитесь на рассылку</b><br>
+    <div>
+    <input type="email" class="footer-input" name="email" placeholder="E-mail ">
+            
     <button type="button" class="button-footer">Подписаться
         <span class="visually-hidden">join</span>
                 <svg class="icon-join" width="24" height="24">
                     <use href="./images/sprite.svg#icon-paper_plane"></use>
                 </svg>
     </button>
+</div>
 </div>
 </div>   
 <div >
@@ -452,14 +456,37 @@
                 <use href="./images/sprite.svg#icon-mail"></use>
             </svg>
           </div>
-        <div class="form-field">
-            <textarea class="form-label comment" name="comment" rows="5" placeholder=" ">Комментарий</textarea>
+        <div class="comment-field">
+            <textarea class="comment" name="comment" rows="5" placeholder=" Комментарий"></textarea>
         </div>
+    
+    <div class="check">
+<label class="policy">
+    <input type="checkbox" class="checkbox" name="checkbox" value="checked"/>
+    Соглашаюсь с рассылкой и принимаю <a href="" class="agreement">Условия договора</a>
+    <svg class="icon-square" width="15.9" height="15">
+        <use href="./images/sprite.svg#icon-square"></use>
+    </svg>
+    <svg class="icon-check" width="15" height="15">
+        <use href="./images/sprite.svg#icon-check"></use>
+    </svg>
+</label>
+</div>
+
+
+
+
+
+
+
+    <div class="send">
+        <button  type="button" class="send-button" >Отправить</button>
+    </div>
+    
       </form>  
     </div>
 </div>
 
 <script src="./js/modal.js"></script>
-<script src="./js/form_order.js"></script>
 </body>
 </html>
