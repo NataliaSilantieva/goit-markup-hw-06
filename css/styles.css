@@ -107,12 +107,8 @@ header{
  .container{
    
     width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-   
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
+   
     
 }
 
@@ -123,11 +119,10 @@ header{
 }
 
 .advantages-container{
-    padding-top: 94px;
+    padding:94px 15px 0 15px;
     display: flex;
     width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
+    
    
     margin: 0 auto;
     
@@ -322,6 +317,7 @@ button{
 }
 .advantages-list{
     padding: 0;
+    width:270px;
 }
 
 .advantages-list:not(:last-child){
@@ -338,7 +334,7 @@ button{
     background-color: var(--buttons-background);
     width: 270px;
     height: 120px;
-    padding:25px;
+    padding:25px 0;
 }
 
 
@@ -368,12 +364,12 @@ button{
     letter-spacing: 0.03em;
 
     
-    padding-bottom: 94px;
+    padding:0 0 94px 0;
     margin: 0;
 }
 .section-app{
     display:flex;
-    padding: 0 0 94px 0;
+    padding: 0 15px 94px 15px;
    
 
 }
@@ -424,7 +420,8 @@ button{
 
 
         padding: 94px 0 50px 0;
-        margin: 0 ;
+        margin: 0 auto;
+        width: 1200px;
         
         
     
@@ -446,8 +443,10 @@ button{
     line-height: 1.2;
 
   display: flex;
-  padding: 0 215px 0 215px;
-  margin: 0 ;
+  padding: 0 15px;
+  margin: 0 auto;
+  justify-content: center;
+  width: 1200px;
 }
 
 .image-team{
@@ -678,7 +677,7 @@ margin-bottom: 0;
 .companies-list{
   
     
-    padding: 0 0 94px 0 ;  
+    padding: 0 15px 94px 15px ;  
 
     display: flex;
     justify-content: space-between;
@@ -744,17 +743,16 @@ footer{
 
     display: flex;
     padding:48px 0 24px 0;
-    margin-left:  auto;
-    margin-right: auto;
+    margin:0 auto;
     align-items: baseline;
     justify-content: space-between;
-    width:1600px;
+    width:1200px;
 }
 
 .footer-block{
 
     padding-right: 69px;
-    margin-left: 214px;
+    
 }
 
 .logo{
@@ -803,9 +801,7 @@ footer{
     color:var(--secondary-text-color);
 }
 
-.subscription{
-    margin-right:216px;
-}
+
 .button-footer{
     position: relative;
     
@@ -901,7 +897,7 @@ footer{
     text-align: center;
     background-color:var(--footer-background);
 
-    width: 1600px;
+    
     margin: 0 auto ;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
